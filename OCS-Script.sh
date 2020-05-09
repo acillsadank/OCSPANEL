@@ -20,9 +20,9 @@ fi
 vps="vps";
 
 if [[ $vps = "vps" ]]; then
-	source="https://raw.githubusercontent.com/airblue18/OCSPANEL/master"
+	source="https://raw.githubusercontent.com/acillsadank/OCSPANEL/master"
 else
-	source="https://raw.githubusercontent.com/airblue18/OCSPANEL/master/master"
+	source="https://raw.githubusercontent.com/acillsadank/OCSPANEL/master/master"
 fi
 
 # go to root
@@ -38,7 +38,7 @@ echo "I need to ask some questions before starting setup"
 echo "You can leave the default option and just hit enter if you agree with the option"
 echo ""
 echo "First I need to know the new password of MySQL root user:"
-read -p "Password: " -e -i airblue DatabasePass
+read -p "Password: " -e -i kadallfamily DatabasePass
 echo ""
 echo "Finally, name the Database Name for OCS Panels"
 echo " Please, use one word only, no special characters other than Underscore (_)"
@@ -58,7 +58,7 @@ echo 'echo -e "   #  ###  #  # # ##  # # # # "' >> .bashrc
 echo 'echo -e "    # # #  #  # # #   # # # # "' >> .bashrc
 echo 'echo -e "  ##  # # ###  ## ### # #  #  "' >> .bashrc
 echo 'echo -e "welcome to the server $HOSTNAME" | lolcat' >> .bashrc
-echo 'echo -e "Script mod by shigeno"' >> .bashrc
+echo 'echo -e "Script mod by RIZWAN ARIF FIRMANSYAH"' >> .bashrc
 echo 'echo -e "Type menu to display a list of commands"' >> .bashrc
 echo 'echo -e ""' >> .bashrc
 apt-get install -y mysql-server
@@ -93,8 +93,8 @@ rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.backup 
 mv /etc/nginx/conf.d/vps.conf /etc/nginx/conf.d/vps.conf.backup 
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/airblue18/OCSPANEL/master/nginx.conf" 
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/airblue18/OCSPANEL/master/vps.conf" 
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/acillsadank/OCSPANEL/master/nginx.conf" 
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/acillsadank/OCSPANEL/master/vps.conf" 
 sed -i 's/cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' /etc/php5/fpm/php.ini 
 sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php5/fpm/pool.d/www.conf
 
